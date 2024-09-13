@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>templates in django</title>
+    <style>
+      #text{
+        margin:auto;
+        height:150px;
+        width:1250px;
+        }
+     .but{
+        width:100px;
+        height:50px;
+        background-color:white;
+        &:hover{
+        color:white;
+        background-color:green;
+        transition:all 250ms linear 0s;
+        transform:scale(1)
+        }
+        }
+    </style>
+</head>
+<body>
+<!--   <h1>Mai ek masoom is templete hoon </br>-->
+<!--       {{ name }} is from {{ place }}-->
+<!--   </h1>-->
+ <h1>Text Analyzer</h1>
+<form action="/analyze" method="get">
+    <textarea name = 'text' id = "text"></textarea>
+    <br>
+    <label name="removepunchuation">Remove punchuation</label>
+    <input type="checkbox" name="removepunchuation" id="removepunchuation">
+ <br>
+     <label name="fullCap">Full Captilize</label>
+    <input type="checkbox" name="fullCap" id="fullCap">
+<br>
+     <label name="newlineremover">new line remover</label>
+    <input type="checkbox" name="newlineremover" id="newlineremover">
+    <br>
+     <label name="spaceremover">extra space remove</label>
+    <input type="checkbox" name="spaceremover" id="spaceremover">
+    <br>
+    <label name="charcount">Total character count</label>
+    <input type="checkbox" name="charcount" id="charcount">
+    <br>
+    <button type="submit" class ="but">Analyze Text</button>
+</form>
+</body>
+</html>
